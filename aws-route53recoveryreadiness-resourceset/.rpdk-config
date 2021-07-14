@@ -1,0 +1,19 @@
+{
+    "artifact_type": "RESOURCE",
+    "typeName": "AWS::Route53RecoveryReadiness::ResourceSet",
+    "language": "java",
+    "runtime": "java8",
+    "entrypoint": "software.amazon.route53recoveryreadiness.resourceset.HandlerWrapper::handleRequest",
+    "testEntrypoint": "software.amazon.route53recoveryreadiness.resourceset.HandlerWrapper::testEntrypoint",
+    "settings": {
+        "namespace": [
+            "software",
+            "amazon",
+            "route53recoveryreadiness",
+            "resourceset"
+        ],
+        "codegen_template_path": "guided_aws",
+        "protocolVersion": "2.0.0"
+    },
+    "executableEntrypoint": "software.amazon.route53recoveryreadiness.resourceset.HandlerWrapperExecutable"
+}

@@ -1,0 +1,17 @@
+{
+    "ResourceSetName": "TheBestDNSResourceSet",
+    "ResourceSetType": "AWS::Route53RecoveryReadiness::DNSTargetResource",
+    "Resources": [
+        {
+            "DnsTargetResource": {
+                "DomainName": "myDomain",
+                "HostedZoneArn": "arn:aws:route53:::hostedzone/Z148QEXAMPLE8V",
+                "TargetResource": {
+                    "NLBResource": {
+                        "Arn": "arn:aws:elasticloadbalancing:ap-northeast-1:805716259113:loadbalancer/app/v2-api-balancer/db49ab0ecaef1de8"
+                    }
+                }
+            }
+        }
+    ]
+}

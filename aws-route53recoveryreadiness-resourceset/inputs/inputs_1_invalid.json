@@ -1,0 +1,4 @@
+{
+  "ResourceSetName": "MyResourceSet",
+  "ResourceSetType": "AWS::DynamoDB::Table"
+}

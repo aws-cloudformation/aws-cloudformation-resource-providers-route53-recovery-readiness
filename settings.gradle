@@ -1,4 +1,0 @@
-rootProject.name = 'AWSCloudFormationResourceProvidersRoute53RecoveryReadiness'
-
-include 'aws-route53recoveryreadiness-readinesscheck'
-
