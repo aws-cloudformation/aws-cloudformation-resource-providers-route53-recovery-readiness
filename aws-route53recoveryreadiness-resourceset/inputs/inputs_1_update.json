@@ -1,0 +1,17 @@
+{
+  "ResourceSetName": "TheBestDNSResourceSet",
+  "ResourceSetType": "AWS::Route53RecoveryReadiness-Readiness::DNSTargetResource",
+  "Resources": [
+    {
+      "DnsTargetResource": {
+        "DomainName": "myDomain",
+        "HostedZoneArn": "arn:aws:route53:::hostedzone/Z148QEXAMPLE8V",
+        "TargetResource": {
+          "R53Resource": {
+            "DomainName": "some-domain.com"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+    "artifact_type": "RESOURCE",
+    "typeName": "AWS::Route53RecoveryReadiness::Cell",
+    "language": "java",
+    "runtime": "java8",
+    "entrypoint": "software.amazon.route53recoveryreadiness.cell.HandlerWrapper::handleRequest",
+    "testEntrypoint": "software.amazon.route53recoveryreadiness.cell.HandlerWrapper::testEntrypoint",
+    "settings": {
+        "namespace": [
+            "software",
+            "amazon",
+            "route53recoveryreadiness",
+            "cell"
+        ],
+        "codegen_template_path": "guided_aws",
+        "protocolVersion": "2.0.0"
+    },
+    "executableEntrypoint": "software.amazon.route53recoveryreadiness.cell.HandlerWrapperExecutable"
+}

@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  This CloudFormation template creates a role assumed by CloudFormation
+  during CRUDL operations to mutate resources on behalf of the customer.
+
+Resources:
+  ExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      MaxSessionDuration: 8400
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: resources.cloudformation.amazonaws.com
+            Action: sts:AssumeRole
+      Path: "/"
+      Policies:
+        - PolicyName: ResourceTypePolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                - "route53-recovery-readiness:CreateResourceSet"
+                - "route53-recovery-readiness:DeleteResourceSet"
+                - "route53-recovery-readiness:GetCell"
+                - "route53-recovery-readiness:GetRecoveryGroup"
+                - "route53-recovery-readiness:GetResourceSet"
+                - "route53-recovery-readiness:ListResourceSets"
+                - "route53-recovery-readiness:UpdateResourceSet"
+                Resource: "*"
+Outputs:
+  ExecutionRoleArn:
+    Value:
+      Fn::GetAtt: ExecutionRole.Arn
